@@ -59,3 +59,13 @@ body{
 .sub-hover:hover{
   background-color: rgb(201, 201, 86);
 }
+.sub-hover1{
+  font-weight: bold;
+}
+.sub-hover1:hover{
+  background-color: rgb(201, 86, 86);
+}
+
+.lines{
+  text-decoration: line-through;
+}

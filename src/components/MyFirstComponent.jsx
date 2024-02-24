@@ -6,6 +6,17 @@ const MyFirstComponent = () => {
     { name: "task1", priority: "1" },
     { name: "task2", priority: "2" },
   ];
+  function deleteElement() {
+    var element = document.getElementById("DeleteMe");
+    element.parentNode.removeChild(element);
+}
+function lineIt(){
+ document.getElementById("LineP").style.textDecoration="line-through";
+ document.getElementById("LineP").style.color="red";
+
+
+}
+
 
   return (
  
@@ -44,7 +55,12 @@ const MyFirstComponent = () => {
         ></textarea>
 
         <button className=" mt-3 rounded-3 w-25 py-2 sub-hover">Submit</button>
-
+        <button onClick={deleteElement} className=" mt-3 rounded-3 w-25 py-2 sub-hover1">Delete</button>
+        <h2 id="DeleteMe">this text deleted</h2>
+        <button onClick={lineIt} className=" mt-3 rounded-3 w-25 py-2 sub-hover1">LineIt</button>
+         <p id="LineP" style={{fontSize:"20px"}}>This text have line click button</p>
+       
+       
         {arr.map((element) => (
           <div>
             {element.name} {element.priority}
